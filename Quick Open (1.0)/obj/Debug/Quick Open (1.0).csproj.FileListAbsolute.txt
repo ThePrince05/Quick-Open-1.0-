@@ -1,0 +1,13 @@
+C:\Users\Administrator\source\repos\Quick Open (1.0)\Quick Open (1.0)\bin\Debug\Quick Open (1.0).exe.config
+C:\Users\Administrator\source\repos\Quick Open (1.0)\Quick Open (1.0)\bin\Debug\Quick Open (1.0).exe
+C:\Users\Administrator\source\repos\Quick Open (1.0)\Quick Open (1.0)\bin\Debug\Quick Open (1.0).pdb
+C:\Users\Administrator\source\repos\Quick Open (1.0)\Quick Open (1.0)\obj\Debug\Quick Open (1.0).csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\Quick Open (1.0)\Quick Open (1.0)\obj\Debug\Quick_Open__1._0_.Properties.Resources.resources
+C:\Users\Administrator\source\repos\Quick Open (1.0)\Quick Open (1.0)\obj\Debug\Quick Open (1.0).csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\Quick Open (1.0)\Quick Open (1.0)\obj\Debug\Quick Open (1.0).csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\Quick Open (1.0)\Quick Open (1.0)\obj\Debug\Quick Open (1.0).exe
+C:\Users\Administrator\source\repos\Quick Open (1.0)\Quick Open (1.0)\obj\Debug\Quick Open (1.0).pdb
+C:\Users\Administrator\source\repos\Quick Open (1.0)\Quick Open (1.0)\obj\Debug\Quick_Open__1._0_.Main.resources
+C:\Users\Administrator\source\repos\Quick Open (1.0)\Quick Open (1.0)\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Administrator\source\repos\Quick Open (1.0)\Quick Open (1.0)\obj\Debug\Quick Op.C64DBA25.Up2Date
+C:\Users\Administrator\source\repos\Quick Open (1.0)\Quick Open (1.0)\bin\Debug\quick low.ico
