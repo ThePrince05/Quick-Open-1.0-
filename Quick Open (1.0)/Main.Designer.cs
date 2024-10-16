@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel_main = new System.Windows.Forms.Panel();
             this.btn_close = new FontAwesome.Sharp.IconPictureBox();
             this.panel_border = new System.Windows.Forms.Panel();
@@ -40,20 +38,13 @@
             this.btn_save = new System.Windows.Forms.Button();
             this.lbl_quickOpen = new System.Windows.Forms.Label();
             this.lbl_main = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.panel_main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
             this.panel_border.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.Text = "notifyIcon1";
-            this.notifyIcon1.Visible = true;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
             // 
             // panel_main
             // 
@@ -90,6 +81,9 @@
             this.btn_close.Size = new System.Drawing.Size(49, 50);
             this.btn_close.TabIndex = 6;
             this.btn_close.TabStop = false;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            this.btn_close.MouseLeave += new System.EventHandler(this.btn_close_MouseLeave);
+            this.btn_close.MouseHover += new System.EventHandler(this.btn_close_MouseHover);
             // 
             // panel_border
             // 
@@ -114,15 +108,22 @@
             this.lbl_startUp.Size = new System.Drawing.Size(73, 36);
             this.lbl_startUp.TabIndex = 4;
             this.lbl_startUp.Text = "Start-up \r\nSettings\r\n";
+            this.lbl_startUp.Click += new System.EventHandler(this.lbl_startUp_Click);
+            this.lbl_startUp.MouseLeave += new System.EventHandler(this.lbl_startUp_MouseLeave);
+            this.lbl_startUp.MouseHover += new System.EventHandler(this.lbl_startUp_MouseHover);
             // 
             // txt_directory
             // 
+            this.txt_directory.BackColor = System.Drawing.Color.White;
             this.txt_directory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_directory.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F);
             this.txt_directory.Location = new System.Drawing.Point(84, 90);
             this.txt_directory.Name = "txt_directory";
+            this.txt_directory.ReadOnly = true;
             this.txt_directory.Size = new System.Drawing.Size(469, 34);
             this.txt_directory.TabIndex = 3;
+            this.txt_directory.Click += new System.EventHandler(this.txt_directory_Click);
+            this.txt_directory.TextChanged += new System.EventHandler(this.txt_directory_TextChanged);
             // 
             // btn_save
             // 
@@ -134,6 +135,7 @@
             this.btn_save.TabIndex = 2;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // lbl_quickOpen
             // 
@@ -144,6 +146,9 @@
             this.lbl_quickOpen.Size = new System.Drawing.Size(97, 21);
             this.lbl_quickOpen.TabIndex = 1;
             this.lbl_quickOpen.Text = "Quick Open";
+            this.lbl_quickOpen.Click += new System.EventHandler(this.lbl_quickOpen_Click);
+            this.lbl_quickOpen.MouseLeave += new System.EventHandler(this.lbl_quickOpen_MouseLeave);
+            this.lbl_quickOpen.MouseHover += new System.EventHandler(this.lbl_quickOpen_MouseHover);
             // 
             // lbl_main
             // 
@@ -154,35 +159,48 @@
             this.lbl_main.Size = new System.Drawing.Size(413, 32);
             this.lbl_main.TabIndex = 0;
             this.lbl_main.Text = "Select Application Directory";
+            this.lbl_main.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbl_main_MouseDown);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "Quick Open";
+            this.notifyIcon1.Visible = true;
+            this.notifyIcon1.DoubleClick += new System.EventHandler(this.notifyIcon1_DoubleClick);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(640, 240);
             this.Controls.Add(this.panel_main);
             this.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quick Open";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.Shown += new System.EventHandler(this.Main_Shown);
             this.panel_main.ResumeLayout(false);
             this.panel_main.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
             this.panel_border.ResumeLayout(false);
             this.panel_border.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.NotifyIcon notifyIcon1;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Panel panel_main;
         private FontAwesome.Sharp.IconPictureBox btn_close;
         private System.Windows.Forms.Panel panel_border;
@@ -191,6 +209,8 @@
         private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.Label lbl_quickOpen;
         private System.Windows.Forms.Label lbl_main;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }
 

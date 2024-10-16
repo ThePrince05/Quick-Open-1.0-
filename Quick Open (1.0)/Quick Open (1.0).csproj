@@ -7,7 +7,7 @@
     <ProjectGuid>{A271BBE3-C15A-4D46-BDBA-2FE12CB7E016}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Quick_Open__1._0_</RootNamespace>
-    <AssemblyName>Quick Open %281.0%29</AssemblyName>
+    <AssemblyName>Quick Open</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,8 +32,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>quick low.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FontAwesome.Sharp">

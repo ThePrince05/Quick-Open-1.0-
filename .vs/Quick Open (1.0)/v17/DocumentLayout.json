@@ -3,12 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\source\\repos\\Quick Open (1.0)\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A271BBE3-C15A-4D46-BDBA-2FE12CB7E016}|Quick Open (1.0)\\Quick Open (1.0).csproj|c:\\users\\administrator\\source\\repos\\quick open (1.0)\\quick open (1.0)\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A271BBE3-C15A-4D46-BDBA-2FE12CB7E016}|Quick Open (1.0)\\Quick Open (1.0).csproj|C:\\Users\\Administrator\\source\\repos\\Quick Open (1.0)\\quick open (1.0)\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A271BBE3-C15A-4D46-BDBA-2FE12CB7E016}|Quick Open (1.0)\\Quick Open (1.0).csproj|solutionrelative:quick open (1.0)\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A271BBE3-C15A-4D46-BDBA-2FE12CB7E016}|Quick Open (1.0)\\Quick Open (1.0).csproj|c:\\users\\administrator\\source\\repos\\quick open (1.0)\\quick open (1.0)\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A271BBE3-C15A-4D46-BDBA-2FE12CB7E016}|Quick Open (1.0)\\Quick Open (1.0).csproj|C:\\Users\\Administrator\\source\\repos\\Quick Open (1.0)\\quick open (1.0)\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A271BBE3-C15A-4D46-BDBA-2FE12CB7E016}|Quick Open (1.0)\\Quick Open (1.0).csproj|solutionrelative:quick open (1.0)\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|Quick Open (1.0)||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A271BBE3-C15A-4D46-BDBA-2FE12CB7E016}|Quick Open (1.0)\\Quick Open (1.0).csproj|C:\\Users\\Administrator\\source\\repos\\Quick Open (1.0)\\quick open (1.0)\\app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A271BBE3-C15A-4D46-BDBA-2FE12CB7E016}|Quick Open (1.0)\\Quick Open (1.0).csproj|solutionrelative:quick open (1.0)\\app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A271BBE3-C15A-4D46-BDBA-2FE12CB7E016}|Quick Open (1.0)\\Quick Open (1.0).csproj|c:\\users\\administrator\\source\\repos\\quick open (1.0)\\quick open (1.0)\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +28,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,16 +52,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Main.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Quick Open (1.0)\\Quick Open (1.0)\\Main.cs",
-              "RelativeDocumentMoniker": "Quick Open (1.0)\\Main.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Quick Open (1.0)\\Quick Open (1.0)\\Main.cs",
-              "RelativeToolTip": "Quick Open (1.0)\\Main.cs",
-              "ViewState": "AQIAAOcAAAAAAAAAAADwv/sAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T04:24:36.114Z",
+              "DocumentIndex": 2,
+              "Title": "Quick Open (1.0)",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Quick Open (1.0)\\Quick Open (1.0)\\Quick Open (1.0).csproj",
+              "RelativeDocumentMoniker": "Quick Open (1.0)\\Quick Open (1.0).csproj",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Quick Open (1.0)\\Quick Open (1.0)\\Quick Open (1.0).csproj",
+              "RelativeToolTip": "Quick Open (1.0)\\Quick Open (1.0).csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-16T06:22:17.216Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "app.manifest",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Quick Open (1.0)\\Quick Open (1.0)\\app.manifest",
+              "RelativeDocumentMoniker": "Quick Open (1.0)\\app.manifest",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Quick Open (1.0)\\Quick Open (1.0)\\app.manifest",
+              "RelativeToolTip": "Quick Open (1.0)\\app.manifest",
+              "ViewState": "AQIAACkAAAAAAAAAAAAAADwAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001203|",
+              "WhenOpened": "2024-10-16T06:04:33.894Z"
             },
             {
               "$type": "Document",
@@ -64,6 +85,19 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-16T04:24:11.898Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Main.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Quick Open (1.0)\\Quick Open (1.0)\\Main.cs",
+              "RelativeDocumentMoniker": "Quick Open (1.0)\\Main.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Quick Open (1.0)\\Quick Open (1.0)\\Main.cs",
+              "RelativeToolTip": "Quick Open (1.0)\\Main.cs",
+              "ViewState": "AQIAAGgAAAAAAAAAAAAiwHoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T04:24:36.114Z",
+              "EditorCaption": ""
             }
           ]
         }

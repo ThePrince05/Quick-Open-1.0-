@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -99,9 +100,9 @@ namespace Quick_Open__1._0_
         private void OpenApplication()
         {
             // Specify the path of the application you want to open
-            System.Diagnostics.Process.Start("C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
+            //System.Diagnostics.Process.Start("C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
 
-            /* string path = ReadDirectoryPath();
+            string path = ReadDirectoryPath();
 
             try
             {
@@ -112,7 +113,7 @@ namespace Quick_Open__1._0_
             {
                 MessageBox.Show("Oops, something went wrong on: " + ex.Message);
             }
-            */
+            
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
@@ -126,7 +127,7 @@ namespace Quick_Open__1._0_
         {
             notifyIcon1.Visible = false;
             ShowInTaskbar = true;
-            this.WindowState = FormWindowState.Normal;
+            this.Show();
         }
 
         private void ExitApp(object sender, EventArgs e)
@@ -139,7 +140,8 @@ namespace Quick_Open__1._0_
                 // Unregister the hotkey when the form is closed
                 if (hotkeyRegistered)
                 {
-                    UnregisterHotKey(this.Handle, HOTKEY_ID);
+                    // Unregister the hotkey when the form is closed
+                    UnregisterHotKey(this.Handle, HOTKEY_ID); 
                 }
 
                 // Avoid recursion by preventing the event from triggering again
@@ -233,7 +235,13 @@ namespace Quick_Open__1._0_
 
         private void Main_Load(object sender, EventArgs e)
         {
+            if (ReadDirectoryPath() != null)
+            {
+                txt_directory.Text = ReadDirectoryPath();
 
+            }
+
+            
         }
 
         private void panel_main_MouseDown(object sender, MouseEventArgs e)
@@ -246,6 +254,166 @@ namespace Quick_Open__1._0_
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void lbl_main_MouseDown(object sender, MouseEventArgs e)
+        {
+            base.OnMouseDown(e);
+
+            // When the left mouse button is pressed, drag the window
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
+        private void txt_directory_Click(object sender, EventArgs e)
+        {
+            // Create a new OpenFileDialog
+            System.Windows.Forms.OpenFileDialog openFileDialog = new System.Windows.Forms.OpenFileDialog();
+
+            // Set default path
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+
+            // Set the filter to only show .exe files
+            openFileDialog.Filter = "Executable Files|*.exe|All Files|*.*";
+
+            // Set the title of the dialog
+            openFileDialog.Title = "Select an executable file or program shortcut";
+
+            // Show the dialog and check if the user selected a file
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+
+                // Get the path of the selected executable file
+                string filePath = openFileDialog.FileName;
+
+                // You can now use the file path (e.g., run the program, display the path, etc.)
+                txt_directory.Text = filePath;
+            }
+        }
+
+        private void txt_directory_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_directory.Text != "")
+            {
+                errorProvider1.SetError(txt_directory, "");
+            }
+        }
+
+        private void lbl_startUp_MouseHover(object sender, EventArgs e)
+        {
+            lbl_startUp.ForeColor = Color.FromArgb(0, 123, 255);
+        }
+
+        private void lbl_startUp_MouseLeave(object sender, EventArgs e)
+        {
+            lbl_startUp.ForeColor = Color.Black;
+           
+        }
+
+        private void lbl_startUp_Click(object sender, EventArgs e)
+        {
+            // Get the user's Startup folder path
+            string startupFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.Startup);
+
+            // Open the Startup folder in Windows Explorer
+            Process.Start("explorer.exe", startupFolderPath);
+
+        }
+
+        private void lbl_quickOpen_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Just click on the directory textbox and select the application you want to open with the hotkey" +
+             " (Ctrl Alt + F), save the directory and close the app.", "How To Use Quick Open.",
+             MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void lbl_quickOpen_MouseHover(object sender, EventArgs e)
+        {
+            lbl_quickOpen.ForeColor = Color.FromArgb(0, 123, 255);
+
+        }
+
+        private void lbl_quickOpen_MouseLeave(object sender, EventArgs e)
+        {
+            lbl_quickOpen.ForeColor = Color.Black;
+
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            notifyIcon1.Visible = true;
+        }
+
+        private void btn_close_MouseHover(object sender, EventArgs e)
+        {
+            btn_close.IconColor = Color.Red;
+        }
+
+        private void btn_close_MouseLeave(object sender, EventArgs e)
+        {
+            btn_close.IconColor = Color.Black;
+        }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            if (txt_directory.Text != "")
+            {
+                try
+                {
+                    string directoryPath = txt_directory.Text;
+
+                    // Save the new path to the text file
+                    SaveDirectoryPath(directoryPath);
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Oops, something went wrong on: " + ex.Message, "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                errorProvider1.SetError(txt_directory, "Please select a directory first.");
+            }
+        }
+
+
+      
+        // Method to display form
+        private void ShowForm()
+        {
+
+            // Open SetUp Dialog if Directory document is empty
+            if (ReadDirectoryPath() == null)
+            {
+                this.Show();
+                notifyIcon1.Visible = false;
+            }
+
+            else
+            {
+                this.Hide();  // hide instead of minimizing
+                notifyIcon1.Visible = true;
+            }
+
+        }
+
+        private void notifyIcon1_DoubleClick(object sender, EventArgs e)
+        {
+            notifyIcon1.Visible = false;
+            this.Show();
+        }
+
+        private void Main_Shown(object sender, EventArgs e)
+        {
+            ShowForm();
         }
     }
 }
