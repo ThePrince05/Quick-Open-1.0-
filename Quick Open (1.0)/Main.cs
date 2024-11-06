@@ -212,7 +212,6 @@ namespace Quick_Open__1._0_
                     // Check if the file is empty or contains only whitespace
                     if (string.IsNullOrWhiteSpace(directoryPath))
                     {
-                        MessageBox.Show("Please configure program settings.", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return null;
                     }
 
@@ -303,27 +302,6 @@ namespace Quick_Open__1._0_
             }
         }
 
-        private void lbl_startUp_MouseHover(object sender, EventArgs e)
-        {
-            lbl_startUp.ForeColor = Color.FromArgb(0, 123, 255);
-        }
-
-        private void lbl_startUp_MouseLeave(object sender, EventArgs e)
-        {
-            lbl_startUp.ForeColor = Color.Black;
-           
-        }
-
-        private void lbl_startUp_Click(object sender, EventArgs e)
-        {
-            // Get the user's Startup folder path
-            string startupFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.Startup);
-
-            // Open the Startup folder in Windows Explorer
-            Process.Start("explorer.exe", startupFolderPath);
-
-        }
-
         private void lbl_quickOpen_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Just click on the directory textbox and select the application you want to open with the hotkey" +
@@ -394,6 +372,7 @@ namespace Quick_Open__1._0_
             if (ReadDirectoryPath() == null)
             {
                 this.Show();
+                MessageBox.Show("Please configure program settings.", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 notifyIcon1.Visible = false;
             }
 
@@ -414,6 +393,30 @@ namespace Quick_Open__1._0_
         private void Main_Shown(object sender, EventArgs e)
         {
             ShowForm();
+        }
+
+        private void lbl_startUp_Click(object sender, EventArgs e)
+        {
+            // Get the user's Startup folder path
+            string startupFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.Startup);
+
+            // Open the Startup folder in Windows Explorer
+            Process.Start("explorer.exe", startupFolderPath);
+        }
+
+        private void lbl_startUp_MouseHover(object sender, EventArgs e)
+        {
+            lbl_startUp.ForeColor = Color.FromArgb(0, 123, 255);
+        }
+
+        private void lbl_startUp_MouseLeave(object sender, EventArgs e)
+        {
+            lbl_startUp.ForeColor = Color.Black;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Process.Start("ConsoleApp1\\Program.cs");
         }
     }
 }
