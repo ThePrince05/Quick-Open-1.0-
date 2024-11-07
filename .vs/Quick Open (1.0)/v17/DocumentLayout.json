@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{A271BBE3-C15A-4D46-BDBA-2FE12CB7E016}|Quick Open (1.0)\\Quick Open (1.0).csproj|solutionrelative:quick open (1.0)\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A271BBE3-C15A-4D46-BDBA-2FE12CB7E016}|Quick Open (1.0)\\Quick Open (1.0).csproj|c:\\users\\administrator\\source\\repos\\quick open (1.0)\\quick open (1.0)\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A271BBE3-C15A-4D46-BDBA-2FE12CB7E016}|Quick Open (1.0)\\Quick Open (1.0).csproj|C:\\Users\\Administrator\\source\\repos\\Quick Open (1.0)\\quick open (1.0)\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A271BBE3-C15A-4D46-BDBA-2FE12CB7E016}|Quick Open (1.0)\\Quick Open (1.0).csproj|solutionrelative:quick open (1.0)\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -56,7 +56,7 @@
               "RelativeDocumentMoniker": "Quick Open (1.0)\\Program.cs",
               "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Quick Open (1.0)\\Quick Open (1.0)\\Program.cs",
               "RelativeToolTip": "Quick Open (1.0)\\Program.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAADwvx4AAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAADwvxEAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-06T11:07:09.783Z",
               "EditorCaption": ""
@@ -82,8 +82,7 @@
               "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Quick Open (1.0)\\Quick Open (1.0)\\Main.cs [Design]",
               "RelativeToolTip": "Quick Open (1.0)\\Main.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T04:24:11.898Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-16T04:24:11.898Z"
             },
             {
               "$type": "Document",
